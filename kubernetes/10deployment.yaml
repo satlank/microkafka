@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: microkafka-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microkafka
+    spec:
+      containers:
+      - name: zookeeper
+        image: microzookeeper:v1
+        ports:
+        - containerPort: 2181
+      - name: kafka
+        image: microkafka:v1
+        ports:
+        - containerPort: 9092
