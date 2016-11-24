@@ -55,6 +55,7 @@ topic:
     kafka-topics.sh --list --zookeeper 192.168.99.100:32369
 
     kafka-topics.sh --create --topic testtopic --partitions 1 --replication-factor 1 --zookeeper 192.168.99.100:32369
+    Created topic "testtopic".
 
     kafka-topics.sh --list --zookeeper 192.168.99.100:32369
     testtopic
